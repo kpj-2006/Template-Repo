@@ -6,7 +6,7 @@ We welcome contributions from everyone. By participating in this project, you ag
 
 ## � IMPORTANT: Discord Communication is Mandatory
 
-**All project communication MUST happen on Discord. We do not appreciate GitHub notifications.**
+**All project communication MUST happen on Discord. We do not pay attention to GitHub notifications.**
 
 - Join our [Discord server](https://discord.gg/hjUhu33uAn) before starting any work
 - Post your PR/issue updates in the relevant Discord channel (**MANDATORY**)
@@ -44,12 +44,13 @@ Feature suggestions are welcome! Please:
 - Provide a clear description of the feature
 - Explain why this feature would be useful
 - Include examples of how it would work
-
 ### Contributing Code
 
-1. **Create an Issue First**: For any feature requests, bugs, or enhancements, create an issue and wait to be assigned before starting work.
-2. **No Unassigned PRs**: Do not submit pull requests without being assigned to an issue. Unassigned PRs will be closed.
-3. **Small Changes Exception**: For minor changes (< 20 lines) or documentation updates, you may directly create a PR.
+1. **Submit an Issue First**: For features, bugs, or enhancements, create an issue first
+2. **Get Assigned**: Wait to be assigned before starting work(preferable)
+3. **Submit Your PR**: Once assigned, create a PR addressing the issue
+4. **Unrelated PRs**: Pull requests unrelated to issues may be closed or take longer to review
+
 
 ## 🚀 Getting Started
 

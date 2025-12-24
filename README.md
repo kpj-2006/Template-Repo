@@ -12,7 +12,7 @@
 <!-- Organization Name -->
 <div align="center">
 
-[![Static Badge](https://img.shields.io/badge/AOSSIE-/TODO-228B22?style=for-the-badge&labelColor=FFC517)](https://TODO.aossie/)
+[![Static Badge](https://img.shields.io/badge/aossie.org/TODO-228B22?style=for-the-badge&labelColor=FFC517)](https://TODO.aossie.org/)
 
 <!-- Correct deployed url to be added -->
 
@@ -266,7 +266,8 @@ TODO: Add maintainer information
 
 ## 📍 License
 
-Distributed under the [MIT License](https://opensource.org/licenses/MIT). See [LICENSE](./LICENSE) for more information.
+This project is licensed under the GNU General Public License v3.0.
+See the [LICENSE](LICENSE) file for details.
 
 ---
 
