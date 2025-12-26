@@ -78,8 +78,6 @@ exclude-labels:
   - 'wontfix'
 
 replacers:
-  - search: '/\[([A-Z]+-\d+)\]/g'
-    replace: '[$1](https://jira.example.com/browse/$1)'
   - search: '/CVE-(\d{4})-(\d+)/g'
     replace: '[CVE-$1-$2](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-$1-$2)'
 
