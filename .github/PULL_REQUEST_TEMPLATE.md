@@ -1,4 +1,4 @@
-###  Addressed Issue:
+###  Addressed Issues:
 <!-- Link the issue this PR addresses -->
 Fixes #(issue number)
 
