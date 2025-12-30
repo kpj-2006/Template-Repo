@@ -13,7 +13,7 @@ jobs:
     concurrency:
       group: create-initial-issues-${{ github.ref }}
       cancel-in-progress: false
-    if: ${{ github.repository_owner == 'AOSSIE-Org' }}
+    if: ${{ github.repository != 'AOSSIE-Org/Template-Repo' && github.repository_owner == 'AOSSIE-Org' }}
     permissions:
       contents: write
       issues: write
