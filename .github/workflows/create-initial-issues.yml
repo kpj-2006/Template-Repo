@@ -92,5 +92,8 @@ jobs:
           # Commit the changes
           git commit -m "chore: cleanup initial issues automation files"
           
+          # Pull latest changes to avoid conflicts
+          git pull --rebase origin ${{ github.ref_name }}
+          
           # Push the changes
           git push
