@@ -244,7 +244,7 @@ pre-commit install
 #### 1. **Pre-commit Hook Failed: Trailing Whitespace**
 
 **Error:**
-```
+```text
 Trim Trailing Whitespace.................................................Failed
 - hook id: trailing-whitespace
 - exit code: 1
@@ -261,7 +261,7 @@ git commit -m "your message"
 #### 2. **Pre-commit Hook Failed: End of File Fixer**
 
 **Error:**
-```
+```text
 Fix End of Files.........................................................Failed
 - hook id: end-of-file-fixer
 - exit code: 1
@@ -278,7 +278,7 @@ git commit -m "your message"
 #### 3. **Pre-commit Hook Failed: Check YAML/JSON/TOML**
 
 **Error:**
-```
+```text
 Check Yaml..........................................Failed
 - hook id: check-yaml
 - exit code: 1
@@ -299,7 +299,7 @@ File .github/workflows/test.yml: mapping values are not allowed here
 #### 4. **Pre-commit Hook Failed: Detect Secrets**
 
 **Error:**
-```
+```text
 detect-secrets...........................................................Failed
 - hook id: detect-secrets
 - exit code: 1
@@ -324,7 +324,7 @@ Potential secrets about to be added to git repo:
 #### 5. **Pre-commit Hook Failed: Mixed Line Endings**
 
 **Error:**
-```
+```text
 Mixed line ending........................................................Failed
 - hook id: mixed-line-ending
 - exit code: 1
@@ -341,7 +341,7 @@ git commit -m "your message"
 #### 6. **Pre-commit Hook Failed: Large Files**
 
 **Error:**
-```
+```text
 Check for added large files..............................................Failed
 - hook id: check-added-large-files
 - exit code: 1
@@ -367,7 +367,7 @@ git add .gitattributes
 #### 7. **Pre-commit Hook Failed: Merge Conflict Markers**
 
 **Error:**
-```
+```text
 Check for merge conflicts................................................Failed
 - hook id: check-merge-conflict
 - exit code: 1
@@ -419,7 +419,7 @@ pre-commit autoupdate
 #### 10. **Hook Installation Failed**
 
 **Error:**
-```
+```text
 An error has occurred: InvalidManifestError:
 =====> /path/to/.pre-commit-config.yaml does not exist
 ```
