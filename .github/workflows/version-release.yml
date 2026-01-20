@@ -56,6 +56,7 @@ jobs:
           echo "✓ Created and pushed tag v$VERSION"
 
       - name: Find and Publish Draft Release
+        id: publish_release
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -85,8 +86,10 @@ jobs:
               });
               
               console.log(`✓ Published draft release as ${version}`);
+              core.setOutput('released', 'true');
             } else {
               console.log('⚠️ No draft release found. Please ensure release-drafter has created a draft release first.');
+              core.setOutput('released', 'false');
               core.setFailed('No draft release found to publish');
               
               //Uncomment below to auto-create release if no draft exists but also check release-drafter config first(why not working)
@@ -107,6 +110,14 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **Version:** v${{ steps.get_version.outputs.version }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Tag Created:** ✓" >> $GITHUB_STEP_SUMMARY
-          echo "- **GitHub Release:** ✓" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.publish_release.outputs.released }}" = "true" ]; then
+            echo "- **GitHub Release:** ✓" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **GitHub Release:** ✗ (no draft found)" >> $GITHUB_STEP_SUMMARY
+          fi
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Release completed successfully!" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.publish_release.outputs.released }}" = "true" ]; then
+            echo "Release completed successfully!" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "Release failed - no draft release was found to publish" >> $GITHUB_STEP_SUMMARY
+          fi
