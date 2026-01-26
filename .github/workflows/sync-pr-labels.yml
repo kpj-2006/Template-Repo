@@ -270,23 +270,14 @@ jobs:
               
               const contributorLabels = [];
               
-              // Check if contributor is a member of the organization
-              try {
-                await github.rest.orgs.checkMembershipForUser({
-                  org: context.repo.owner,
-                  username: prAuthor
-                });
-                contributorLabels.push('member');
-              } catch (error) {
-                // Not a member
-                if (commits.data.length <= 1) {
-                  contributorLabels.push('first-time-contributor');
-                } else {
-                  contributorLabels.push('external-contributor');
-                }
+              // Determine contributor type based on commit count
+              if (commits.data.length <= 1) {
+                contributorLabels.push('first-time-contributor');
+              } else {
+                contributorLabels.push('external-contributor');
               }
               
-              // Check if PR author is a collaborator
+              // Maintainer check
               try {
                 const permissionLevel = await github.rest.repos.getCollaboratorPermissionLevel({
                   owner: context.repo.owner,
@@ -294,7 +285,7 @@ jobs:
                   username: prAuthor
                 });
                 
-                if (permissionLevel.data.permission === 'admin' || permissionLevel.data.permission === 'maintain') {
+                if (['admin', 'maintain'].includes(permissionLevel.data.permission)) {
                   contributorLabels.push('maintainer');
                 }
               } catch (error) {
