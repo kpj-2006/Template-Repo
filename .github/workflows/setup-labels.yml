@@ -23,7 +23,7 @@ jobs:
             const requiredLabels = [
               // ==================== CONTRIBUTOR LABELS ====================
               { 
-                name: 'org-Member', 
+                name: 'org-member', 
                 color: '0E8A16', 
                 description: 'Member of the organization with admin/maintain permissions' 
               },
