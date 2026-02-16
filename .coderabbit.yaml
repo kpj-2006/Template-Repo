@@ -21,6 +21,14 @@ issue_enrichment:
         instructions: Feature requests, improvements to existing functionality, performance optimizations, refactoring suggestions, UI/UX enhancements, and any suggestions to make the project better or add new capabilities.
       - label: documentation
         instructions: Documentation updates, additions, corrections, or clarifications needed. This includes missing docs, outdated information, unclear instructions, API documentation, code examples, README improvements, and any requests for better explanations or guides.
+  planning:
+    enabled: true
+    auto_planning:
+      enabled: true
+      labels:
+        - "plan-me" # Auto-plan issues with this label
+        - "feature" # Also auto-plan these
+        - "!no-plan" # Never auto-plan issues with this label
 
 reviews:
   profile: assertive # Options: chill (focuses on significant issues, less nitpicky about style), assertive (more thorough, flags style issues and minor improvements too)
